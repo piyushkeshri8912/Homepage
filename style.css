@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Poppins",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* Header */
+.hero {
+    background-color: #008080;
+    padding: 6rem 2rem;
+    color: white;
+}
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6rem;
+}
+img[alt="profile-image"]{
+    min-width: 20rem;
+    max-width: 30rem;
+    height: auto;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.profile h1{
+    position: absolute;
+    top: 42rem;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 6px rgb(0, 0, 0);
+}
+.about{
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    height: 100%;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    box-shadow:  0px 2px 6px rgb(0, 0, 0,0.2);
+}
+.hero-content .social-icons{
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    gap: 2rem;
+}
+.hero-content .social-icons i{
+    font-size: 3.5rem;
+    color: black;
+}
+.hero h2{
+    margin-bottom: 2rem;
+}
+
+/* Project */
+section.projects{
+    padding: 1rem 6rem;
+}
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem 1rem;
+}
+.projects h2{
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+.project-card{
+    box-shadow: 0 2px 6px rgb(0, 0, 0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.project-card img{
+    width: 100%;
+    height: auto;
+}
+.card-info{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem 0; 
+    /* justify-items: space-between; */
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.card-info h3{
+    font-size: 2rem;
+}
+.card-info .icons{
+    display: flex;
+    gap: 1.6rem;
+}
+.icons i{
+    font-size: 2rem;   
+    color: black;
+}
+.card-info p{
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    
+}
+/* Contact section */
+footer{
+    background-color: teal;
+    margin-top: 2rem;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.contact-right img{
+    width: 30rem;
+    height: 30rem;                  
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+    object-position: center top;
+    align-self: center;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.contact-left h2{
+    font-size: 3.6rem;
+}
+.contact-left p{
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+.contact-left .social-icons i{
+    font-size: 3rem;
+    color: black;
+}
+.contact-left .social-icons{
+    display: flex;
+    gap: 2rem;
+}
+i{
+    transition: transform 0.3s ease;
+}
+.icons i:hover, .social-icons i:hover{
+    transform: scale(1.2);
+}
+/* screen width less than 1000px */
+@media (max-width:67.5rem){
+    /* 1000px/16px=62.5rem */
+    /* 62.5 x 16px= 1000px */
+    html{
+        /* 9px /16 px=56.25% */
+        font-size: 56.25%;
+    }
+}
+/* screen size less than 888px */
+@media (max-width: 55.5rem){
+    /* 8px/16px=50% */
+    html{
+        font-size: 50%;
+    }
+}
+/* screen size less than 800px */
+@media (max-width: 50rem){
+    .about{
+        font-size: 1.7rem;
+    }
+}
+/* screen size less than 672px */
+@media (max-width: 42rem){
+    /* 7px/16px */
+    html{
+        font-size: 43.75%;
+    }
+    footer{
+        padding: 3rem 4rem;
+        gap: 1.5rem;
+    }
+    img[alt="profile-image"]{
+        min-width: 15rem;
+        max-width: 25rem;
+        height: auto;   
+    }
+    .profile h1{
+    position: absolute;
+    top: 36.5rem;
+    font-size: 3rem;
+    }
+    .contact-right img{
+    width: 25rem;
+    height: 25rem; 
+    }
+}
+/* screen size less than 576px */
+@media (max-width:36rem){
+    .hero-content{
+        flex-direction: column;
+    }
+    
+}
+/* screen size less than 448 px */
+@media(max-width:28rem){
+    html{
+        font-size: 37.5%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
